@@ -4,16 +4,16 @@ pipeline{
         maven 'maven' 
     }
     environment {
-        DOCKERHUB_CREDENTIALS_ID = 'dockerhub-creds' 
-        DOCKERHUB_USERNAME       = 'eagowri'
-        IMAGE_NAME               = "${env.DOCKERHUB_USERNAME}/my-app"
+        DOCKERHUB_CREDENTIALS_ID = 'tests' 
+        DOCKERHUB_USERNAME       = 'nishanth09'
+        IMAGE_NAME               = "${nishanth09}/my-app"
         CONTAINER_NAME           = "my-app-container"
     }
     stages{
         stage('Github src') {
             steps {
                 echo 'Checking out source code...'
-                git branch: 'master', url: 'https://github.com/gowri-ea/myntra-maven-report'
+                git branch: 'master', url: 'https://github.com/nishanth300/webpagess'
             }
         }
 
