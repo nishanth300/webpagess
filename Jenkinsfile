@@ -4,7 +4,7 @@ pipeline{
         maven 'maven' 
     }
     environment {
-        DOCKERHUB_CREDENTIALS_ID = 'tests' 
+        DOCKERHUB_CREDENTIALS_ID = 'test' 
         DOCKERHUB_USERNAME       = 'nishanth09'
         IMAGE_NAME               = "${nishanth09}/my-app"
         CONTAINER_NAME           = "my-app-container"
@@ -13,7 +13,7 @@ pipeline{
         stage('Github src') {
             steps {
                 echo 'Checking out source code...'
-                git branch: 'master', url: 'https://github.com/nishanth300/webpagess'
+                git branch: 'master', url: 'https://github.com/nishanth300/webpagess.git'
             }
         }
 
