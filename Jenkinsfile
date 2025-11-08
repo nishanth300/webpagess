@@ -13,7 +13,7 @@ pipeline{
         stage('Github src') {
             steps {
                 echo 'Checking out source code...'
-                git branch: 'master', url: 'https://github.com/nishanth300/webpagess'
+                git branch: 'master', url: 'https://github.com/nishanth300/webpagess.git'
             }
         }
 
